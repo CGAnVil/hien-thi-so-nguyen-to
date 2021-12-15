@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let totalNumber = prompt('Nhập số lượng nguyên tố cần hiển thị');
+    for(let number = 2, count = 0; count < totalNumber; number++ ) {
+        if (number < 2) {
+            alert('không phải số nguyên tố')
+        } else if (number == 2) {
+            alert (number)
+            count ++
+        } else {
+            let isPrime = true;
+            for (let i = 2; i < number; i++) {
+                if (number % i === 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            if (isPrime === true) {
+                count ++
+                alert(number)
+            }
+
+        }
+    }
+
+
+
+</script>
+</body>
+</html>
